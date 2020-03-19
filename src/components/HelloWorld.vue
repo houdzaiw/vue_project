@@ -3,9 +3,11 @@
 <div>
    <Layout style="height:790px;border-radius: 20px;">
         <Layout style="background:#FEFEFE;borderBottomLeftRadius:20px;borderTopLeftRadius:20px">
+        <!--头部logo 导航 搜索 -->
             <Header class="header" style="background:#FEFEFE">
              <Row>
                 <Col span="4"> <img src="../assets/logo.png" /></Col>
+                <!-- 导航 -->
                 <Col span="14">
                      <div style="margin-top:15px">
              <Menu mode="horizontal" :theme="theme1" active-name="1">
@@ -24,6 +26,7 @@
             </Menu>
             </div>
                 </Col>
+                <!-- 搜索 -->
                 <Col span="6"
                      <div style="margin-top:15px">
                <Input placeholder="search" style="width: auto">
@@ -32,131 +35,129 @@
             </div>
                 </Col>
             </Row>
-            
-            
             </Header>
             <Content>
+            <!--cards 部分 -->
                <div>
                     <div class="content-card">
                         <div style="font-size:18px">Cards</div>
                         <div>VIew all Cards</div>
                     </div>
-                    <div style="display:flex;margin-top:20px">
-                    
-                       <div style="margin-left:130px">
-                         <img style="width:336px;height:193px;border-radius:20px" src="../assets/cards5.png" />
+                    <Row style="margin-top:20px">
+                        <Col span="8">
+                            <div style="margin-left:130px">
+                         <img class="card-img" src="../assets/cards5.png" />
                        </div>
-                        <div style="margin-left:80px">
-                         <img style="width:336px;height:193px;border-radius:20px" src="../assets/card6.png" />
+                        </Col>
+                        <Col span="8">
+                            <div style="margin-left:80px">
+                         <img class="card-img" src="../assets/card6.png" />
                        </div>
-                        <Card style="width:336px;height:193px;margin-left:60px;background:#F8F8F8">
-                            <div style="text-align:center;margin-top:40px">
+                        </Col>
+                        <Col span="8">
+                            <Card class="card-Upload">
+                            <div class="card-Upload-content">
                              <Upload action="//jsonplaceholder.typicode.com/posts/">
                                  <Icon style="font-size:30px" type="ios-add-circle-outline" />
                             </Upload>
                                 <h3>Add New Card</h3>
                             </div>
                         </Card>
-                    </div>
+                        </Col>
+                    </Row>
+                    
                </div>
 
-               <div style="display:flex;margin-left:130px;margin-top:20px">
-                    <div style="height:350px;width:290px;">
+                <!--Main Services 模块-->
+               <div class="main-content">
+                <!--Main Services 左边模块-->
+                    <div class="main-content-left">
                        <div class="content-bottom-left">
                         <h3>Main Services</h3>
                         <div>View all</div>
                        </div>
-                       <div style="display:flex;margin-top:20px">
-                             <Card style="width:85px;height:85px;background:#fff;margin-left:10px;margin-right:50px;border-radius:20px">
+                       <div class="card-exhibition">
+                             <Card class="main-tr-card" >
                             <div style="text-align:center;">
-                            <Icon style="font-size:30px;color:#FF656D" type="ios-swap" />
+                            <Icon class="main-tr-card-img" type="ios-swap" />
                                 <h6>Transac</h6>
                             </div>
                         </Card>
 
-                         <Card style="width:85px;height:85px;background:#fff;margin-left:10px;border-radius:20px">
+                         <Card class="main-Utility-card">
                             <div style="text-align:center;">
-                            <Icon style="font-size:30px;color:#FF656D"  type="md-bulb" />
+                            <Icon class="main-tr-card-img"  type="md-bulb" />
                                 <h6>Utility</h6>
                             </div>
                         </Card>
                        </div>
 
-                       <div style="display:flex;margin-top:20px">
-                             <Card style="width:85px;height:85px;background:#fff;margin-left:10px;margin-right:50px;border-radius:20px">
+                       <div class="card-exhibition" style="display:flex;margin-top:20px">
+                             <Card class="main-tr-card">
                             <div style="text-align:center;">
-                            <img style="width:30px;height:30px" src="../assets/qd1.png" />
+                            <img class="main-Utility-card-img" src="../assets/qd1.png" />
                                 <h6>
                                 Loanhs</h6>
                             </div>
                         </Card>
 
-                         <Card style="width:85px;height:85px;background:#fff;margin-left:10px;border-radius:20px">
+                         <Card class="main-Utility-card">
                             <div style="text-align:center;">
-                             <img style="width:30px;height:30px" src="../assets/jsb.png" />
+                             <img class="main-Utility-card-img" src="../assets/jsb.png" />
                                 <h6>
                                 Deposits</h6>
                             </div>
                         </Card>
                        </div>
 
-                       <div style="display:flex;margin-top:20px">
-                             <Card style="width:85px;height:85px;background:#fff;margin-left:10px;margin-right:50px;border-radius:20px">
+                       <div class="card-exhibition">
+                             <Card class="main-tr-card">
                             <div style="text-align:center;">
-                             <img style="width:30px;height:30px" src="../assets/nz.png" />
+                             <img class="main-Utility-card-img"  src="../assets/nz.png" />
                                 <h6>Fasttranhsfer</h6>
                             </div>
                         </Card>
 
-                         <Card style="width:85px;height:85px;background:#fff;margin-left:10px;border-radius:20px">
+                         <Card class="main-Utility-card">
                             <div style="text-align:center;">
-                           <img style="width:30px;height:30px" src="../assets/jt.png" />
+                           <img class="main-Utility-card-img" src="../assets/jt.png" />
                                 <h6>
                                 Exchahnge</h6>
                             </div>
                         </Card>
                        </div>
                     </div>
-                    <div style="width:950px;margin-left:60px">
+                      <!--Main Services 右边模块-->
+                    <div class="main-current">
                         <div>
-                            <div style="display:flex;justify-content:space-between;margin-left:20px">
+                            <div class="main-current-text">
                                 <h3>Current</h3>
                                 <div>VIew All</div>
                             </div>
-                            <div style="margin-top:20px;display:flex">
-                              <div style="margin-left:20px;flex-grow:1"> 1063873637834</div>
-                              <div style="margin-left:20px;flex-grow:2">-----------------------------------------------------------------------------------------------------------------------------------------------------------</div>
-                              <div style="margin-left:20px;flex-grow:1"><h4> $2,200.01</h4></div>
-                            </div>
-                            <div style="margin-top:20px;display:flex">
-                              <div style="margin-left:20px;flex-grow:1"> 1063873637834</div>
-                              <div style="margin-left:20px;flex-grow:2">-----------------------------------------------------------------------------------------------------------------------------------------------------------</div>
-                              <div style="margin-left:20px;flex-grow:1"><h4> $2,200.01</h4></div>
-                            </div>
-                             <div style="margin-top:20px;display:flex">
-                              <div style="margin-left:20px;flex-grow:1"> 1063873637834</div>
-                              <div style="margin-left:20px;flex-grow:2">-----------------------------------------------------------------------------------------------------------------------------------------------------------</div>
-                              <div style="margin-left:20px;flex-grow:1"><h4> $2,200.01</h4></div>
+                            <div v-for="item in todayList" :key=index class="main-current-currentList">
+                              <div  class="main-current-currentList-name"> {{item.name}}</div>
+                              <div style="margin-left:20px;flex-grow:2;">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                              <div class="main-current-currentList-name"><h4> {{item.price}}</h4></div>
                             </div>
                         </div>
                        <div>
-                            <div style="display:flex;justify-content:space-between;margin-left:20px;margin-top:20px">
-                                <h3>
-                                Savings</h3>
+                            <div class="savings-content">
+                                <h3>Savings</h3>
                                 <div>VIew All</div>
                             </div>
+                            <!--Main Services 右边统计图模块-->
                             <div style="margin-top:20px;display:flex">
                                  <div style="width:620px;margin-left:10px" id="container1"></div>
                                  <div style="display:flex;justify-content:flex-end">
                                     <div style="flex1;padding-left:40px;padding-right:150px">
-                                        <div style="margin-bottom:8px;">Total</div>
-                                        <div style="margin-bottom:8px;">This week</div>
-                                        <div style="margin-bottom:8px;">This month</div>
+                                        <div class="savings-week">Total</div>
+                                        <div class="savings-week">This week</div>
+                                        <div class="savings-week">This month</div>
                                     </div>
                                     <div style="text-align:right">
-                                        <div style="margin-bottom:8px;"><h4>$100.09</h4></div>
-                                        <div style="margin-bottom:8px;"><h4>$2567.89</h4></div>
-                                        <div style="margin-bottom:8px;"><h4>$123.09</h4></div>
+                                        <div class="savings-week"><h4>$100.09</h4></div>
+                                        <div class="savings-week"><h4>$2567.89</h4></div>
+                                        <div class="savings-week"><h4>$123.09</h4></div>
                                     </div>
                                  </div>
                             </div>
@@ -165,7 +166,7 @@
                </div>
             </Content>
         </Layout>
-         <Sider hide-trigger style="width: 300px; min-width:300px; max-width: 300px; flex: 0 0 200px;">
+         <Sider class="sider-content" hide-trigger style="width: 300px; min-width:300px; max-width: 300px; flex: 0 0 200px;">
             <div class="sider-top">
                 <Icon style="font-size:24px" type="md-notifications-outline" />
                 <div class="sider-top-right">
@@ -181,23 +182,14 @@
                     <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                 </Select>
             </div>
-            <div class="sider-statistics">
+            <div class="sider-statistics" v-for="item in currentList" :key=index>
                  <img style="width:25px;height:25px;margin-right:10px" src="../assets/q2.png" />
-                <div class="sider-statistics-text">Dribbble pro Plan</div>
-                <div class="sider-statistics-price">-$100</div>
+                <div class="sider-statistics-text">{{item.name}}</div>
+                <div class="sider-statistics-price">{{item.price}}</div>
             </div>
-             <div class="sider-statistics">
-                <img style="width:25px;height:25px;margin-right:10px" src="../assets/yuan.png" />
-                <div class="sider-statistics-text">Adidas Refund</div>
-                <div class="sider-statistics-price">+$230</div>
-            </div>
-             <div class="sider-statistics">
-                <img style="width:25px;height:25px;margin-right:10px" src="../assets/q1.png" />
-                <div class="sider-statistics-text">Wacom LCD</div>
-                <div class="sider-statistics-price">-$3000</div>
-            </div>
-            <div class="sider-Button">
-                 <Button style="margin-left:50px;width:200px;height:45px;border-radius:40px;background:#FF4D56" type="error">
+            
+            <div class="sider-Button-content">
+                 <Button class="sider-Button" type="error">
                     <span>Transfer Money</span>
                     <Icon style="font-size:18px;margin-left:50px" type="md-arrow-forward" />
                  </Button>
@@ -216,6 +208,7 @@
 import ChartView from "./ChartView";
 import { Chart, registerShape } from '@antv/g2';
     export default {
+        name: 'HellowWorld',
     components: {
         ChartView,
     },
@@ -223,9 +216,38 @@ import { Chart, registerShape } from '@antv/g2';
         return{
             bgImg:{
                 backgroundImage: "url(" + require("../assets/bg1.png") + ")",
-　　　　　　　　　　backgroundRepeat: "no-repeat",
-backgroundSize:'100% 100%'
+　　　　　　　　　backgroundRepeat: "no-repeat",
+                backgroundSize:'100% 100%'
             },
+            currentList: [
+                    {
+                        name: 'Dribbble pro Plan',
+                        price: '-$100'
+                    },
+                    {
+                         name: 'Adidas Refund',
+                        price: '+$230'
+                    },
+                    {
+                         name: 'Wacom LCD',
+                        price: '-$3000'
+                    },
+                ],
+
+                 todayList: [
+                    {
+                        name: '1063873637834',
+                        price: ' $2,200.01'
+                    },
+                    {
+                         name: '1063873637834',
+                        price: '$1,300.89'
+                    },
+                    {
+                         name: '1063873637834',
+                        price: '$1,848.11'
+                    },
+                ],
             cityList: [
                     {
                         value: 'New York',
@@ -382,6 +404,91 @@ chart.render();
     padding-left:130px;
     padding-right:130px;
 }
+.card-exhibition{
+    display:flex;
+    margin-top:20px
+}
+.card-img{
+    width:336px;
+    height:193px;
+    border-radius:20px
+}
+.savings-week{
+    margin-bottom:8px;
+}
+.main-current-currentList-name{
+    margin-left:20px;
+    flex-grow:1
+}
+.main-content-left{
+    height:350px;
+    width:290px;
+}
+.main-current{
+    width:auto;
+    margin-left:60px
+}
+.sider-Button{
+    margin-left:50px;
+    width:200px;
+    height:45px;
+    border-radius:40px;
+    background:#FF4D56
+}
+.main-tr-card-img{
+    font-size:30px;
+    color:#FF656D
+}
+.savings-content{
+    display:flex;
+    justify-content:space-between;
+    margin-left:20px;
+    margin-top:20px
+}
+.card-Upload{
+    width:336px;
+    height:193px;
+    margin-left:60px;
+    background:#F8F8F8
+}
+.main-current-currentList{
+    margin-top:20px;
+    display:flex
+}
+.main-tr-card{
+    width:85px;
+    height:85px;
+    background:#fff;
+    margin-left:10px;
+    margin-right:50px;
+    border-radius:20px
+}
+.main-current-text{
+    display:flex;
+    justify-content:space-between;
+    margin-left:20px
+}
+.main-Utility-card-img{
+    width:30px;
+    height:30px
+}
+.main-Utility-card{
+    width:85px;
+    height:85px;
+    background:#fff;
+    margin-left:10px;
+    border-radius:20px
+}
+.main-content{
+    display:flex;
+    margin-left:130px;
+    margin-top:20px;
+    flex:1;
+}
+.card-Upload-content{
+        text-align:center;
+        margin-top:40px
+    }
 
 .content-bottom-left{
     display:flex;
@@ -427,7 +534,7 @@ chart.render();
 .sider-statistics-price{
     flex:1;
 }
-.sider-Button{
+.sider-Button-content{
     margin-top:30px;
 }
 .ivu-layout-header {
